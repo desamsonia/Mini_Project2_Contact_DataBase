@@ -1,8 +1,9 @@
 #include "header.h"
 extern int cnt;
 
-void add(DATABASE *p)
+DATABASE* add(DATABASE *p)
 {
+   p = realloc(p,(cnt+1)*sizeof(DATABASE));
    printf("Enter name:");
    scanf("%s",p[cnt].name);
    printf("Enter phone number:");
@@ -10,4 +11,5 @@ void add(DATABASE *p)
    printf("Enter email id:");
    scanf("%s",p[cnt].email);
    cnt++;
+   return p;
 }
