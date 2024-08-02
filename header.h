@@ -1,12 +1,9 @@
-//header files inclusion
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
-//variable declrations
+#define MAX 5
 int cnt;
 
-//structure declaration
 typedef struct dataBase
 {
     char name[20];
@@ -14,9 +11,10 @@ typedef struct dataBase
     char email[30];
 
 }DATABASE;
-
-//Prototypes
-DATABASE* add(DATABASE *);
-DATABASE* delete(DATABASE *);
+void add(DATABASE *);
+void delete(DATABASE *);
 void view(DATABASE *);
 void sort(DATABASE *);
+
+
+

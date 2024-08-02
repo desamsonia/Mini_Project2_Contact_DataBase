@@ -1,7 +1,7 @@
 #include "header.h"
 int main()
 {
-    DATABASE *data = 0;
+    DATABASE data[MAX];
     char ch;
     while(1)
     {
@@ -11,17 +11,18 @@ int main()
     scanf("%c",&ch);
     switch (ch)
     {
-    case 'A': data = add(data);
+    case 'A': add(data);
               break;
     case 'V': view(data);
               break;
-    case 'D': data = delete(data);
+    case 'D': delete(data);
               break;
     case 'S': sort(data);
               break; 
     case 'E': exit(0);   
-    //default: printf("INvalid\n");
-          //  break;                                     
+    default: printf("INvalid\n");
+            break; 
+                                         
     }
 
     }
